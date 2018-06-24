@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="sp_security:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/sp_security_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="sp_security" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="sp_security/web/Web" />
+    </root>
+  </artifact>
+</component>
