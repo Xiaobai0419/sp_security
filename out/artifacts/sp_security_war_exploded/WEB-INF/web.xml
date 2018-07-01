@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
 
-    <!--<display-name>sp_security</display-name>-->
+    <display-name>sp_security</display-name>
 
     <!--&lt;!&ndash; Spring MVC &ndash;&gt;-->
     <!--<servlet>-->

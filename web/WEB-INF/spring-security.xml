@@ -8,12 +8,21 @@
 
     <http auto-config="true">
         <intercept-url pattern="/admin**" access="ROLE_USER" />
+        <form-login
+                login-page="/login"
+                default-target-url="/welcome"
+                authentication-failure-url="/login?error"
+                username-parameter="username"
+                password-parameter="password" />
+        <logout logout-success-url="/login?logout" /><!-- "/login"是无认证时的重定向路径，这里指向HelloController的RequestMapping对应路径，然后才转到login.jsp页面，传递参数，"/welcome"、"/login?error"、"/login?logout"也是，都交给了SpringMVC管理，username-parameter、password-parameter是指login.jsp页面提交表单域的名称-->
+        <!-- enable csrf protection -->
+        <csrf/>
     </http>
 
     <authentication-manager>
         <authentication-provider>
             <user-service>
-                <user name="yiibai" password="123456" authorities="ROLE_USER" />
+                <user name="xiaobai" password="123456" authorities="ROLE_USER" />
             </user-service>
         </authentication-provider>
     </authentication-manager>
